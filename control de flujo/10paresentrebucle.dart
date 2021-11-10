@@ -1,10 +1,10 @@
 import 'dart:io';
 
 void main() {
-  printMenoraMayot();
+  paresEntreDosNumeros();
 }
 
-void printMenoraMayot() {
+void paresEntreDosNumeros() {
   stdout.write("Ingrese el primer numero: ");
   var a = stdin.readLineSync();
   stdout.write("Ingrese el segundo numero: ");
@@ -13,10 +13,18 @@ void printMenoraMayot() {
   int num2 = int.parse(b!);
 
   if (num1 < num2) {
-    print("Menor: $num1, Mayor: $num2");
+    for (int i = num1; i <= num2; i++) {
+      if (i % 2 == 0) {
+        print(i);
+      }
+    }
   } else if (num1 == num2) {
-    print("Los numeros $num1 y $num2 son iguales");
+    print("Los numeros son iguales no hay pares entre ellos");
   } else {
-    print("Menor: $num2, Mayor: $num1");
+    for (int i = num1; i >= num2; i--) {
+      if (i % 2 == 0) {
+        print(i);
+      }
+    }
   }
 }
