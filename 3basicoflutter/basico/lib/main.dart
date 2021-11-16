@@ -1,4 +1,5 @@
 import 'package:basico/pages/home_page.dart';
+import 'package:basico/pages/single_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +20,11 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      initialRoute: 'home',
+      routes: {
+        'home':(context) => const HomePage(),
+        'single':(context) => SinglePage(),
+      },
     );
   }
 }
