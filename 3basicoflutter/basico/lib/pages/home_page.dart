@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({Key key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -14,14 +14,25 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
           child: Column(
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.arrow_circle_down_outlined),
+              Text("Haz click sobre cada card"),
+            ],
+          ),
           _cardViews(
-              "ListView",
-              "ListView es el widget de desplazamiento más utilizado. Muestra sus hijos uno tras otro en la dirección de desplazamiento. En el eje transversal, se requiere que los niños llenen el ListView.",
+              "Scrolling ListView",
+              "ListView es el widget de desplazamiento más utilizado. Muestra sus hijos uno tras otro en la dirección de desplazamiento. En el eje transversal, se requiere que los hijos llenen el ListView. Como podemos ver hace scroll hasta el ultimo elemento",
               "single"),
           _cardViews(
-              "Single ScrollView",
-              "Este widget es útil cuando tiene un solo cuadro que normalmente será completamente visible, por ejemplo, una esfera de reloj en un selector de tiempo, pero debe asegurarse de que se pueda desplazar si el contenedor se vuelve demasiado pequeño en un eje (la dirección de desplazamiento ",
-              "single"),
+              "Input FormField",
+              "Se construyo un formulario de login. Este widget mantiene el estado actual del campo del formulario, de modo que las actualizaciones y los errores de validación se reflejan visualmente en la interfaz de usuario ",
+              "login"),
+          _cardViews(
+              "Layout GridView",
+              "Los diseños de cuadrícula más utilizados son GridView.count , que crea un diseño con un número fijo de mosaicos en el eje transversal, y GridView.extent , que crea un diseño con mosaicos que tienen una extensión máxima de eje transversal. Un SliverGridDelegate personalizado puede producir un arreglo 2D arbitrario de elementos secundarios , incluidos arreglos que no están alineados o se superponen.",
+              "grid"),
           Expanded(child: Container()),
           _bannerdown()
         ],
@@ -44,7 +55,10 @@ class _HomePageState extends State<HomePage> {
               contentPadding: const EdgeInsets.all(15),
 
               // ignore: unnecessary_new
-              title: Text(texto),
+              title: Text(
+                texto,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
               subtitle: Text(content),
             ),
           ],

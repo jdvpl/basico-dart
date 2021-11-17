@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SinglePage extends StatefulWidget {
-  const SinglePage({Key? key}) : super(key: key);
+  const SinglePage({Key key}) : super(key: key);
 
   @override
   _SinglePageState createState() => _SinglePageState();
@@ -17,6 +17,9 @@ class _SinglePageState extends State<SinglePage> {
           miCard(),
           miCardImage(),
           miCardDesign(),
+          miCardImageCarga(),
+          miCardImageCarga(),
+          miCardImageCarga(),
           miCardImageCarga(),
           miCardImageCarga(),
           miCardImageCarga(),
@@ -43,13 +46,6 @@ class _SinglePageState extends State<SinglePage> {
                 'Este es el subtitulo del card. Aqui podemos colocar descripción de este card.'),
             leading: Icon(Icons.home),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              FlatButton(onPressed: () => {}, child: Text('Aceptar')),
-              FlatButton(onPressed: () => {}, child: Text('Cancelar'))
-            ],
-          )
         ],
       ),
     );
@@ -63,8 +59,7 @@ class _SinglePageState extends State<SinglePage> {
       child: Column(
         children: <Widget>[
           Image(
-            image: NetworkImage(
-                'https://www.yourtrainingedge.com/wp-content/uploads/2019/05/background-calm-clouds-747964.jpg'),
+            image: AssetImage('assets/montana.jpg'),
           ),
           Container(
             padding: EdgeInsets.all(10),
@@ -83,8 +78,7 @@ class _SinglePageState extends State<SinglePage> {
       child: Column(
         children: <Widget>[
           FadeInImage(
-            image: NetworkImage(
-                'https://staticuestudio.blob.core.windows.net/buhomag/2016/03/01195417/pexels-com.jpg'),
+            image: AssetImage('assets/montana2.jpg'),
             placeholder: AssetImage('assets/loading.gif'),
             fit: BoxFit.cover,
             height: 260,
