@@ -1,6 +1,5 @@
 import 'package:internediowidget/utils/responsive.dart';
 import 'package:internediowidget/widgets/circle.dart';
-import 'package:internediowidget/widgets/icon_container.dart';
 import 'package:flutter/material.dart';
 import 'package:internediowidget/widgets/menu.dart';
 import 'package:internediowidget/widgets/register_form.dart';

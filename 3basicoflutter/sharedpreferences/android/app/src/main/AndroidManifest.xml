@@ -1,15 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.internediowidget">
-            <uses-permission android:name="android.permission.INTERNET"/>
-
-
-        <!-- Permissions options for the `location` group -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-
+    package="com.example.sharedpreferences">
    <application
-        android:label="internediowidget"
+        android:label="sharedpreferences"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
@@ -40,9 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-           <meta-data android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyBzQkVHaOiqQQb-lZt70M0CUDWCVEZbt1s"/>
-
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:internediowidget/pages/animated_page.dart';
-import 'package:internediowidget/pages/home_page.dart';
-import 'package:internediowidget/pages/map_page.dart';
-import 'package:internediowidget/pages/register_page.dart';
+import 'package:sharedpreferences/pages/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,10 +17,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "home",
       routes: {
-        "home": (context) => HomePage(),
-        "register": (context) => RegisterPage(),
-        "map": (context) => MapPage(),
-        "animated": (context) => AnimatedPage(),
+        "home": (context) => RegisterPage(),
       },
     );
   }

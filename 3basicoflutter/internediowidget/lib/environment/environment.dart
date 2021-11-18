@@ -1,0 +1,12 @@
+class Environment {
+  static const String API_KEY_MAPS = "AIzaSyBzQkVHaOiqQQb-lZt70M0CUDWCVEZbt1s";
+
+  static const MERCADOPAGO_PUBLIC_KEY =
+      'APP_USR-96114e3d-4fb4-471b-a871-d86d2eb3c682';
+  static const MERCADOPAGO_TEST_KEY =
+      'TEST-bec15290-3b34-4597-a632-2e960c06dd6a';
+  static const MERCADOPAGO_ACCES_TOKEN =
+      'APP_USR-2175622968748144-022405-faad280f79f4b664e4ac9ab134b77ecd-399580524';
+  static const MERCADOPAGO_CLIENT_ID = '2175622968748144';
+  static const MERCADOPAGO_CLIENT_SECRET = 'WD5aK9q3IDZQieslXQ2lbBhd45urAr3o';
+}
