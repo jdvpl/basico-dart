@@ -42,6 +42,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 _con.descripcioncontroller, Icons.description),
             _textField("EMAIL", 1, TextInputType.emailAddress,
                 _con.emailcontroller, Icons.description),
+            _textField("PROFESION", 1, TextInputType.text,
+                _con.profesioncontroller, Icons.school),
             _textField("TELEFONO", 1, TextInputType.phone, _con.phonecontroller,
                 Icons.phone_android_rounded),
             _textField("LINK DE HV", 1, TextInputType.url, _con.urlhvController,
@@ -60,9 +62,9 @@ class _RegisterPageState extends State<RegisterPage> {
     return ClipPath(
       clipper: WaveClipperTwo(),
       child: Container(
-        color: azul,
+        color: Colors.deepOrange[900],
         //indicando que es el 30% de la pantalla
-        height: MediaQuery.of(context).size.height * 0.25,
+        height: MediaQuery.of(context).size.height * 0.3,
         child: Column(
           children: [
             _btnMenuDrawer(),
@@ -141,18 +143,19 @@ class _RegisterPageState extends State<RegisterPage> {
         child: ButtonApp(
           onPressed: _con.register,
           text: "Guardar Datos",
+          buttonColor: Colors.deepOrange[900],
         ));
   }
 
   Widget _btnMenuDrawer() {
     return Container(
-      margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.015),
+      margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
       alignment: Alignment.centerLeft,
       child: IconButton(
         onPressed: _con.openDrawer,
         icon: Icon(
           Icons.menu,
-          color: black,
+          color: white,
           size: 35,
         ),
       ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sharedpreferences/constants/constants.dart';
 
 class MenuButton extends StatefulWidget {
   const MenuButton({Key key}) : super(key: key);
@@ -50,13 +49,25 @@ class _MenuButtonState extends State<MenuButton> {
                 ),
               ],
             ),
-            decoration: BoxDecoration(color: azul),
+            decoration: BoxDecoration(color: Colors.deepOrange[900]),
           ),
           ListTile(
             title: Text("Mi Perfil"),
             // leading para colocar el icono a la izquierda
             trailing: Icon(Icons.edit),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context, "profile", (route) => false);
+            },
+          ),
+          ListTile(
+            title: Text("Inicio"),
+            // leading para colocar el icono a la izquierda
+            trailing: Icon(Icons.home),
+            onTap: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context, "home", (route) => false);
+            },
           ),
 
           // botones para el dark mode
